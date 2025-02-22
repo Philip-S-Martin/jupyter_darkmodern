@@ -97,7 +97,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-border-width: 1px;
   --jp-border-color0: #2b2b2b;
   --jp-border-color1: #2b2b2b;
-  --jp-border-color2: #2b2b2b;
+  --jp-border-color2: #3b3b3b;
   --jp-border-color3: #4b4b4b;
   --jp-inverse-border-color: var(--md-grey-600, #757575);
   --jp-border-radius: 2px;
@@ -299,7 +299,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-console-padding: 10px;
 
   /* Toolbar specific styles */
-  --jp-toolbar-border-color: var(--jp-border-color2);
+  --jp-toolbar-border-color: var(--jp-border-color1);
   --jp-toolbar-micro-height: 8px;
   --jp-toolbar-background: var(--jp-layout-color2);
   --jp-toolbar-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);

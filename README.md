@@ -4,7 +4,7 @@
 
 A JupyterLab theme to visually match VSCode's Dark Modern theme.
 
-![Screenshot of theme on Jupyterlab](image.png)
+![alt text](screenshot.png)
 
 ## Requirements
 

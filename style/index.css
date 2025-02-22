@@ -278,3 +278,19 @@ body[data-notebook='notebooks'] .jp-Notebook-cell{
 .jp-RenderedText[data-mime-type='application/vnd.jupyter.stderr'] .ansi-bold[style*='color:rgb(0,0,255)'] {
   color: rgb(79, 126, 255) !important;
 }
+.jp-MarkdownViewer{
+  background: var(--jp-layout-color2);
+}
+.jp-ThemedContainer .jp-RenderedHTMLCommon code,
+.jp-ThemedContainer .jp-RenderedHTMLCommon pre{
+  margin: 0px;
+  background: var(--jp-layout-color3);
+  color: var(--jp-content-font-color1)
+}
+.jp-ThemedContainer .jp-RenderedHTMLCommon pre{
+  padding: 18px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--jp-border-color2);
+}
