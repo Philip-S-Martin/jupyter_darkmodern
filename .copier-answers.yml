@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.8
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: philipscottmartin01@gmail.com
+author_name: Philip Martin
+has_binder: false
+has_settings: true
+kind: theme
+labextension_name: jupyter_darkmodern
+project_short_description: A JupyterLab theme to visually match VSCode's Dark Modern
+    theme.
+python_name: jupyter_darkmodern
+repository: https://github.com/Philip-S-Martin/jupyter_darkmodern
+test: false
+

@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyter_darkmodern",
+  "description": "jupyter_darkmodern settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
