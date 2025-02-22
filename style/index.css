@@ -1,12 +1,280 @@
 @import url('./variables.css');
 
 /* Set the default typography for monospace elements */
-tt,
-code,
-kbd,
-samp,
-pre {
+
+.jp-Completer {
+  --jp-completer-type-background0: transparent;
+  --jp-completer-type-background1: #1f77b4;
+  --jp-completer-type-background2: #ff7f0e;
+  --jp-completer-type-background3: #2ca02c;
+  --jp-completer-type-background4: #d62728;
+  --jp-completer-type-background5: #9467bd;
+  --jp-completer-type-background6: #8c564b;
+  --jp-completer-type-background7: #e377c2;
+  --jp-completer-type-background8: #7f7f7f;
+  --jp-completer-type-background9: #bcbd22;
+  --jp-completer-type-background10: #17becf;
+}
+
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+
+/* Set the default typography for monospace elements */
+.jp-ThemedContainer tt,
+.jp-ThemedContainer code,
+.jp-ThemedContainer kbd,
+.jp-ThemedContainer samp,
+.jp-ThemedContainer pre {
   font-family: var(--jp-code-font-family);
   font-size: var(--jp-code-font-size);
   line-height: var(--jp-code-line-height);
+}
+
+/* fix illegible yellow background in exception stacktrace */
+:where(
+    .jp-RenderedText[data-mime-type='application/vnd.jupyter.stderr']
+      pre
+      .ansi-yellow-bg
+  ) {
+  color: black;
+}
+.lm-Widget {
+  scrollbar-color: rgba(128, 128, 128, 0.16) transparent;
+}
+div#jp-main-dock-panel {
+    background-color: var(--jp-layout-color1);
+}
+div#jp-MainLogo {
+    background-color: var(--jp-layout-color1);
+}
+  .jp-SideBar .lm-TabBar-tab.lm-mod-current .jp-icon3[fill] {
+    fill:var(--jp-ui-font-color0);
+}
+ .jp-SideBar .lm-TabBar-tab.lm-mod-current svg{
+    fill:var(--jp-ui-font-color0);
+ }
+.jp-SideBar .lm-TabBar-tab.lm-mod-current::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    left: 0;
+    top: 50%; /* Move to the middle */
+    height: 32px;
+    width: 2px; /* Adjust thickness */
+    background-color: var(--jp-brand-color1); /* Blue border */
+    transform: translateY(-50%); /* Offset by half of its own height */
+}
+
+jp-toolbar.lm-Widget.jp-Toolbar.jp-SidePanel-toolbar.jp-FileBrowser-toolbar {
+    background-color: var(--jp-layout-color1);
+}
+.lm-MenuBar-item {
+    background: var(--jp-layout-color1);
+}
+
+  .lm-DockPanel-tabBar .lm-TabBar-tab, .lm-TabPanel-tabBar .lm-TabBar-tab {
+    border-bottom: none;
+}
+  .lm-MenuBar-item.lm-mod-hover {
+    background: var(--jp-layout-color3);
+}
+  .jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
+    background: var(--jp-layout-color1);
+}
+.jp-SideBar.lm-TabBar .lm-TabBar-tab.lm-mod-current:last-child{
+  border-bottom:none;
+}
+  .jp-SideBar.lm-TabBar .lm-TabBar-tab + .lm-TabBar-tab {
+    border-top: none;
+}
+  .jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab.lm-mod-current::after {
+    right: 0;
+}
+  
+  .jp-SideBar .lm-TabBar-tab.lm-mod-current::after {
+    border: none;
+}
+  .jp-SideBar.lm-TabBar .lm-TabBar-tab + .lm-TabBar-tab.lm-mod-current {
+    border-top: none;
+}
+  .jp-SideBar.lm-TabBar .lm-TabBar-tab.lm-mod-current + .lm-TabBar-tab {
+    border-top: none;
+}
+.jp-SideBar.lm-TabBar, #jp-down-stack .lm-TabBar {
+    background: var(--jp-layout-color1);
+}
+  .lm-DockPanel-tabBar .lm-TabBar-tab.lm-mod-current {
+    background: var(--jp-layout-color2);
+}
+  .lm-DockPanel-tabBar .lm-TabBar-tab, .lm-TabPanel-tabBar .lm-TabBar-tab {
+    background: var(--jp-layout-color1);
+  }
+  .lm-TabBar .lm-TabBar-addButton {
+    background: var(--jp-layout-color1);
+  }
+  #jp-left-stack {
+    border-right: none;
+}
+.cm-editor {
+    background-color: var(--jp-layout-color2);
+}
+.jp-Notebook {
+    background: var(--jp-layout-color2);
+}
+.jp-Toolbar {
+  box-shadow: none;
+}
+.jp-InterfaceSwitcher {
+    background: var(--jp-layout-color2);
+}
+.jp-InterfaceSwitcher .lm-MenuBar-item{
+    background: var(--jp-layout-color2);
+}
+
+.lm-MenuBar-menu.jp-ThemedContainer{
+  background: var(--jp-layout-color2)
+}
+.lm-Menu{
+  background: var(--jp-layout-color2);
+  border-color: var(--jp-border-color3);
+}
+.lm-Menu-item[data-type='separator'] > div::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 4px;
+    border-top: var(--jp-border-width) solid var(--jp-border-color3);
+    mix-blend-mode:normal
+}
+.lm-MenuBar-item{
+    border: none;
+}
+.lm-MenuBar-item.lm-mod-active {
+  background: var(--jp-layout-color1);
+}
+.lm-MenuBar-item.lm-mod-active:hover {
+  background: var(--jp-layout-color3);
+}
+.lm-MenuBar.lm-mod-active .lm-MenuBar-item.lm-mod-active {
+    z-index: 9999;
+    background: var(--jp-layout-color3);
+    color: var(--jp-ui-font-color0);
+    border: none;
+    box-shadow: none;
+}
+.lm-Menu-content .lm-Menu-item.lm-mod-active {
+    background: var(--jp-layout-color3);
+    color: var(--jp-ui-font-color0);
+}
+
+.jp-SidePanel-toolbar{
+  background: var(--jp-layout-color1);
+}
+.jp-Dialog-content{
+  box-shadow:none;
+  border-width:1px;
+  border-color:var(--jp-border-color1);
+  border-style:solid
+}
+#jp-top-bar{
+  background-color: var(--jp-layout-color1);
+}
+  button.jp-Dialog-button.jp-mod-styled:focus {
+    border: solid 1px var(--jp-ui-font-color0);
+    outline: none !important
+}
+.jp-Completer-item.jp-mod-active {
+    background: var(--jp-brand-color0);
+    color: white;
+}
+.lm-MenuBar{
+  color: var(--jp-ui-font-color2)
+}
+.jp-Launcher{
+  background: var(--jp-layout-color2);
+}
+.jp-LauncherCard{
+  background: var(--jp-layout-color1);
+}
+.jp-DirListing-item.jp-mod-selected{
+  background: var(--jp-layout-color3);
+  color: var(--jp-ui-font-color1)
+}
+.jp-SettingsPanel{
+  background: var(--jp-layout-color2);
+}
+.jp-PluginList-wrapper{
+  background: var(--jp-layout-color2);
+}
+.jp-FormGroup-content fieldset .jp-inputFieldWrapper > input, .jp-FormGroup-content fieldset .jp-inputFieldWrapper > select, .jp-FormGroup-content fieldset .jp-inputFieldWrapper > textarea{
+  background: var(--jp-layout-color1);
+  border: 1px solid var(--jp-border-color0);
+  color: var(--jp-ui-font-color0);
+  padding: 4px;
+  font-size: var(--jp-content-font-size1);
+}
+.jp-FormGroup-content fieldset input, .jp-FormGroup-content fieldset select {
+  background: var(--jp-layout-color1);
+  border: 1px solid var(--jp-border-color0);
+  padding: 4px;
+  color: var(--jp-ui-font-color0);
+  accent-color: var(--jp-layout-color1);
+}
+.jp-FormGroup-content fieldset input:hover:not(:focus), .jp-FormGroup-content fieldset select:hover:not(:focus) {
+    background: var(--jp-layout-color2);
+}
+.jp-FileBrowser-toolbar > .jp-Toolbar-item .jp-ToolbarButtonComponent{
+  width: 21px;
+  height: 21px;
+}
+.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='launcher:create']{
+  background: var(--jp-ui-font-color2);
+  width:21px;
+}
+.jp-FileBrowser-toolbar
+  .jp-ToolbarButtonComponent[data-command='launcher:create']:hover {
+    background-color: var(--jp-ui-font-color0);
+}
+.jp-SideBar .lm-TabBar-tab{
+  padding: 12px 0px
+}
+.jp-Notebook .jp-Cell .jp-Collapser:hover{
+  background: var(--jp-layout-color4);
+}
+body[data-notebook='notebooks'] .jp-WindowedPanel-window {
+    background: var(--jp-layout-color2);
+}
+body[data-notebook='notebooks']
+  .jp-Notebook.jp-mod-commandMode
+  .jp-Cell.jp-mod-active.jp-mod-selected:not(.jp-mod-multiSelected) {
+    background: var(--jp-layout-color2) !important;
+}
+body[data-notebook='notebooks']
+  .jp-Notebook.jp-mod-commandMode
+  .jp-Cell{
+    background: var(--jp-layout-color2) !important;
+}
+body[data-notebook='notebooks'] #menu-panel{
+    background: var(--jp-layout-color2) !important;
+  
+}
+body[data-notebook='notebooks'] #menu-panel-wrapper{
+    background: var(--jp-layout-color2) !important;
+  
+}
+
+body[data-notebook='notebooks'] #top-panel-wrapper{
+    background: var(--jp-layout-color2) !important;
+  
+}
+body[data-notebook='notebooks'] .jp-Notebook-cell{
+    background: var(--jp-layout-color2) !important;
+}
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
+    background: var(--jp-layout-color1) !important;
+}
+
+.jp-RenderedText[data-mime-type='application/vnd.jupyter.stderr'] .ansi-bold[style*='color:rgb(0,0,255)'] {
+  color: rgb(79, 126, 255) !important;
 }

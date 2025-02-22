@@ -1,7 +1,7 @@
 {
   "jupyter.lab.shortcuts": [],
-  "title": "jupyter_darkmodern",
-  "description": "jupyter_darkmodern settings.",
+  "title": "Jupyter Dark Modern",
+  "description": "Jupyter theme to match VSCode's Dark Modern",
   "type": "object",
   "properties": {},
   "additionalProperties": false
